@@ -9,7 +9,7 @@ package ru.job4j.condition;
 public class MultiMax {
 
     /**
-     * Расчет расстояния между точками.
+     * Большее из трех чисел.
      * @param first первое число для сравнения.
      * @param second второе число для сравнения.
      * @param third  третье число для сравнения.
