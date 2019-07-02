@@ -9,6 +9,7 @@ package ru.job4j.calculator;
 public class Calculator {
     /**
      * Method add.
+     * Складываем первое и второе число.
      * @param first First numeral.
      * @param second Second numeral.
      * @return First numeral plus Second numeral.
@@ -18,6 +19,7 @@ public class Calculator {
     }
     /**
      * Method subtract.
+     * Вычитаем из первого числа второе
      * @param first First numeral.
      * @param second Second numeral.
      * @return First numeral subtract Second numeral.
@@ -27,6 +29,7 @@ public class Calculator {
     }
     /**
      * Method div.
+     * делим первое число на второе
      * @param first First numeral.
      * @param second Second numeral.
      * @return First numeral div Second numeral.
@@ -36,6 +39,7 @@ public class Calculator {
     }
     /**
      * Method multiple.
+     * Умножаем первое число на второе
      * @param first First numeral.
      * @param second Second numeral.
      * @return First numeral multiple Second numeral.
