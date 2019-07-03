@@ -13,26 +13,19 @@ public class PrimeNumber {
      */
     public int calc(int finish) {
         int count = 0;
-        for (int i = 2; i <= finish; i++) { //5
+        for (int i = 2; i <= finish; i++) { // Иду по числам до finish
             boolean primeNumber = true;
 
-            for (int j = 2; j < i ; j++) {
-                if(i % j == 0){
+            for (int j = 2; j < i; j++) { // Иду по делителям числа
+                if (i % j == 0) {
                     primeNumber = false;
                     break;
                 }
             }
-            if(primeNumber == true){
+            if (primeNumber) {
                 count++;
             }
-
         }
-
         return count;
+        }
     }
-
-    public static void main(String[] args) {
-        System.out.println(new PrimeNumber().calc(2));
-
-    }
-}
