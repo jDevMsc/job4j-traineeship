@@ -16,7 +16,7 @@ public class PrimeNumber {
         for (int i = 2; i <= finish; i++) { //5
             boolean primeNumber = true;
 
-            for (int j = 2; j <= i / 2; j++) {
+            for (int j = 2; j < i ; j++) {
                 if(i % j == 0){
                     primeNumber = false;
                     break;
