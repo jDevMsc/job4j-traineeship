@@ -21,16 +21,17 @@ public class CheckTest {
         assertThat(result, is(false));
     }
     @Test
-    public void whenDataMonoandEven(){
+    public void whenDataMonoandEven() {
         Check check = new Check();
         boolean[] input = {true, true, true};
         boolean result = check.mono(input);
-        assertThat( result, is(true));
-    }@Test
-    public void whenDataNotMonoAndEven(){
+        assertThat(result, is(true));
+    }
+    @Test
+    public void whenDataNotMonoAndEven() {
         Check check = new Check();
         boolean[] input = {true, false, true};
         boolean result = check.mono(input);
-        assertThat( result, is(false));
+        assertThat(result, is(false));
     }
 }
