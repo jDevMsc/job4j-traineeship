@@ -35,7 +35,7 @@ public class Triangle {
      * @return
      */
     private boolean exist(double a, double c, double b) {
-        return a + b > c || a + c > b || b + c > a ? true : false;
+        return a + b > c && a + c > b && b + c > a ? true : false;
     }
 
     /**
@@ -54,8 +54,8 @@ public class Triangle {
         double a = new Point().distance(x1, y1, x2, y2);
         double b = new Point().distance(x2, y2, x3, y3);
         double c = new Point().distance(x1, y1, x3, y3);
-        double p = period(a, b, c);
         if (this.exist(a, b, c)) {
+            double p = period(a, b, c);
             // написать формулу для расчета площади треугольника.
             rsl = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         }
