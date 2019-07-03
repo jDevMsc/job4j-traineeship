@@ -14,8 +14,8 @@ public class SqArea {
      * @return площадь.
      */
     public int square(int p, int k) {
-        int w = p/4*k;
-        int h = p/2-w;
+        int w = p / 4 * k;
+        int h = p / 2 - w;
         int square =  w * h;
         return square;
     }

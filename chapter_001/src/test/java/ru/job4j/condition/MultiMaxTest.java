@@ -10,17 +10,17 @@ public class MultiMaxTest {
         MultiMax check = new MultiMax();
         int result = check.max(1, 4, 2);
         assertThat(result, is(4));
-    }@Test
+    } @Test
     public void whenFirstMax() {
         MultiMax check = new MultiMax();
         int result = check.max(3, 2, 1);
         assertThat(result, is(3));
-    }@Test
+    } @Test
     public void whenThirdMax() {
         MultiMax check = new MultiMax();
         int result = check.max(1, 2, 4);
         assertThat(result, is(4));
-    }@Test
+    } @Test
     public void whenEquals() {
         MultiMax check = new MultiMax();
         int result = check.max(3, 3, 3);
