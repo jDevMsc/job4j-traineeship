@@ -69,28 +69,25 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
-        for (int i = 0; i < table.length ; i++) { //строка
-            for (int j = 0; j <table[0].length ; j++) { //колонка
-                if(table[i][j]==1){
-                    if(j >= 1 && table[i + 1][j] == 1 && i < 1) { //проверяем вертикаль
-                        for (int k = 0; k < table.length - i ; k++) {
-                            if (table[i][j] != table[i + k][j]) {
-                                return false; //несовпадение по вертикали
-                            }
-                        }
-                        return true;//несовпадений нет
-                    }else if(i >= 1 && table[i][j +1 ] == 1 && j < 1){ //проверяем горизонталь
-                        for (int k = 0; k < table[0].length - j ; k++) {
-                            if (table[i][j] != table[i][j + k]) {
-                                return false;//несовпадение по горизонтали
-                            }
-                        }
-                        return true;//несовпадений нет
-                    }
-                    return false;// если было ==1, но не подошло не одно условие false
+        for (int i = 0; i <table.length ; i++) { //Проверяем только диагональ на  ==1
+            if(table[i][i]==1){ //если 1, подсчитываем сумму по столбцу и колонке
+                result = true;
+                int countCol = 0;
+                int countRow = 0;
+                for (int j = 0; j <table[0].length ; j++) { //Подсчитываем сумму по столбцу и колонке
+                    countCol += table[i][j]; //сумма по колонке
+                    countRow += table[j][i]; //сумма по строке
                 }
+                if(countCol>1&&countCol!=5){
+                    return false;
+                }
+                if(countRow>1&&countRow!=5){
+                    return false;
+                }
+                return result;
             }
         }
+
         return result;
     }
 
@@ -107,3 +104,27 @@ public class Logic {
         return table;
     }
 }
+
+
+/*for (int i = 0; i < table.length ; i++) { //строка
+        for (int j = 0; j <table[0].length ; j++) { //колонка
+        if(table[i][j]==1){
+        if(j >= 1 && table[i + 1][j] == 1 && i < 1) { //проверяем вертикаль
+        for (int k = 0; k < table.length - i ; k++) {
+        if (table[i][j] != table[i + k][j]) {
+        return false; //несовпадение по вертикали
+        }
+        }
+        return true;//несовпадений нет
+        }else if(i >= 1 && table[i][j +1 ] == 1 && j < 1){ //проверяем горизонталь
+        for (int k = 0; k < table[0].length - j ; k++) {
+        if (table[i][j] != table[i][j + k]) {
+        return false;//несовпадение по горизонтали
+        }
+        }
+        return true;//несовпадений нет
+        }
+        return false;// если было ==1, но не подошло не одно условие false
+        }
+        }
+        }*/
