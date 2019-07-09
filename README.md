@@ -1,6 +1,3 @@
-# job4j
-Я прохожу обучение по курсу Job4j - сайт http://job4j.ru/
+Hello all!
 
-В ноябре 2019 года я должен пройти основную часть курса и устроиться на работу Java разработчиком.
-
-Ниже находятся наиболее интересные проекты. Целью данных проектов является демонстрация навыков разработки на языке Java.
+Below are the most interesting projects. The purpose of these projects is to demonstrate the development skills in the Java language.
