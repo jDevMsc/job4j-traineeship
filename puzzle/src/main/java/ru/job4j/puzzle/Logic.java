@@ -74,14 +74,14 @@ public class Logic {
                 result = true;
                 int countCol = 0;
                 int countRow = 0;
-                for (int j = 0; j <table[0].length ; j++) { //Подсчитываем сумму по столбцу и колонке
+                for (int j = 0; j <table[0].length; j++) { //Подсчитываем сумму по столбцу и колонке
                     countCol += table[i][j]; //сумма по колонке
                     countRow += table[j][i]; //сумма по строке
                 }
-                if(countCol>1&&countCol!=5){
+                if(countCol > 1 && countCol != table.length){
                     return false;
                 }
-                if(countRow>1&&countRow!=5){
+                if(countRow > 1 && countRow != table.length){
                     return false;
                 }
                 return result;
