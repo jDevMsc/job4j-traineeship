@@ -78,10 +78,10 @@ public class Logic {
                     countCol += table[i][j]; //сумма по колонке
                     countRow += table[j][i]; //сумма по строке
                 }
-                if(countCol > 1 && countCol != table.length){
+                if(countCol > 1 && countCol != table.length) {
                     return false;
                 }
-                if(countRow > 1 && countRow != table.length){
+                if(countRow > 1 && countRow != table.length) {
                     return false;
                 }
                 return result;
