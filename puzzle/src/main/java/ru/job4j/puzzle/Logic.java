@@ -106,7 +106,7 @@ public class Logic {
 }
 
 
-/*for (int i = 0; i < table.length ; i++) { //строка
+/*for (int i = 0; i <  table.length ; i++) { //строка
         for (int j = 0; j <table[0].length ; j++) { //колонка
         if(table[i][j]==1){
         if(j >= 1 && table[i + 1][j] == 1 && i < 1) { //проверяем вертикаль
