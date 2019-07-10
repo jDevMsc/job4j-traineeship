@@ -13,17 +13,17 @@ public class ArrayDuplicate {
      * @return массив без дублей
      */
     public String[] remove(String[] array) {
-        int dupl = array.length;
-        for (int i = 0; i < dupl; i++) {
-            for (int j = i + 1; j < dupl; j++) {
+        int leng = array.length;
+        for (int i = 0; i < leng; i++) {
+            for (int j = i + 1; j < leng; j++) {
                 if (array[i].equals(array[j])) {
-                    array[j] = array[dupl - 1];
-                    dupl--;
+                    array[j] = array[leng - 1];
+                    leng--;
                     j--;
                 }
             }
         }
-        return  Arrays.copyOf(array, dupl);
+        return  Arrays.copyOf(array, leng);
     }
-
 }
+

@@ -13,13 +13,13 @@ public class FindLoop {
      * @return индекс элемента если он есть в массиве, иначе -1.
      */
     public int indexOf(int[] data, int el) {
-        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        int avail = -1; // если элемента нет в массиве, то возвращаем -1.
         for (int i = 0; i < data.length; i++) {
             if (data[i] == el) {
-                rst = i;
+                avail = i;
                 break;
             }
         }
-        return rst;
+        return avail;
     }
 }

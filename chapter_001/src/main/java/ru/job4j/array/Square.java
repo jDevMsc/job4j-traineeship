@@ -13,12 +13,12 @@ public class Square {
      * @return массив
      */
     public int[] calculate(int bound) {
-        int[] rst = new int[bound];
+        int[] rst_arr = new int[bound];
         int num = 1;
         for (int i = 0; i < bound; i++) {
-            rst[i] = num * num;
+            rst_arr[i] = num * num;
             num += 1;
         }
-        return rst;
+        return rst_arr;
     }
 }
