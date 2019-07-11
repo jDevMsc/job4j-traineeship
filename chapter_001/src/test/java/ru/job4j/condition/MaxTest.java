@@ -20,10 +20,16 @@ public class MaxTest {
     }
 
     @Test
-    public void when1And2ThenEquals() {
+    public void when1And2And3Then3() {
         Max max = new Max();
-        int result = max.max(1, 1);
-        assertThat(result, is(1));
+        int result = max.max(1, 1 , 3);
+        assertThat(result, is(3));
+    }
+    @Test
+    public void when1And2And3And7Then7() {
+        Max max = new Max();
+        int result = max.max(1, 1 , 3, 7);
+        assertThat(result, is(7));
     }
 
 }

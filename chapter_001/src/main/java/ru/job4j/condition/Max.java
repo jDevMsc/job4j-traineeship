@@ -10,12 +10,35 @@ public class Max {
 
     /**
      * Возвращаем максимальное число.
-     * @param left Первое число для сравнения.
-     * @param right Второе число для сравнения.
+     * @param first Первое число для сравнения.
+     * @param second Второе число для сравнения.
      * @return большее число.
      */
-    public int max(int left, int right) {
-        int result = left > right ? left : right;
+    public int max(int first, int second) {
+        int result = first > second ? first : second;
+        return result;
+    }
+    /**
+     * Возвращаем максимальное число.
+     * @param first Первое число для сравнения.
+     * @param second Второе число для сравнения.
+     * @param third Третье число для сравнения.
+     * @return большее число.
+     */
+    public int max(int first, int second,int third) {
+        int result = first > max(second, third) ? first :  max(second, third);
+        return result;
+    }
+    /**
+     * Возвращаем максимальное число.
+     * @param first Первое число для сравнения.
+     * @param second Второе число для сравнения.
+     * @param third Третье число для сравнения.
+     * @param fourth Четвертое число для сравнения.
+     * @return большее число.
+     */
+    public int max(int first, int second, int third, int fourth) {
+        int result = first > max(second, third, fourth) ? first : max(second, third, fourth);
         return result;
     }
 }
