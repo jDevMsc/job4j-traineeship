@@ -7,6 +7,20 @@ package ru.job4j.condition;
  * @since 0.1
  */
 public class Triangle {
+    private Point a;
+    private Point b;
+    private Point c;
+    /**
+     * Консутрктор класса треугольник.
+     * @param a - точка a(x, y).
+     * @param b - точка b(x, y).
+     * @param c - точка c(x, y).
+     */
+    public Triangle(Point a, Point b, Point c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
     /**
      * Метод вычисления полупериметра по длинам сторон.
@@ -49,12 +63,11 @@ public class Triangle {
      *
      * @return Вернуть площадь, если треугольник существует или -1.
      */
-    public double area(int x1, int y1, int x2, int y2, int x3, int y3) {
+    public double area() {
         double rsl = -1;
-        Point point = new Point();
-        double a = new Point().distance(point);
-        double b = new Point().distance(point);
-        double c = new Point().distance(point);
+        double a = this.a.distance(this.b);
+        double b = this.b.distance(this.c);
+        double c = this.c.distance(this.c);
         if (this.exist(a, b, c)) {
             double p = period(a, b, c);
             // написать формулу для расчета площади треугольника.
