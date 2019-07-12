@@ -26,7 +26,7 @@ public class Max {
      * @return большее число.
      */
     public int max(int first, int second,int third) {
-        int result = first > max(second, third) ? first :  max(second, third);
+        int result = max (first,max(second, third));
         return result;
     }
     /**
@@ -38,7 +38,7 @@ public class Max {
      * @return большее число.
      */
     public int max(int first, int second, int third, int fourth) {
-        int result = first > max(second, third, fourth) ? first : max(second, third, fourth);
+        int result = max(first, max(second, max(third, fourth))) ;
         return result;
     }
 }
