@@ -8,15 +8,56 @@ package ru.job4j.condition;
  */
 public class Point {
     /**
+     * Это поле объекта. Оно доступно только конкретному объекту.
+     */
+    private int x;
+    /**
+     * И это поле объекта. Оно доступно только конкретному объекту.
+     */
+    private int y;
+    /**
+     * И это поле объекта. Оно доступно только конкретному объекту.
+     */
+    private int z;
+    /**
+     * Конструктор, который принимает начальное состояние объекта "точка"
+     * @param x координата x
+     * @param y координата y
+     */
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    /**
+     * Конструктор, который принимает начальное состояние объекта "точка" в 3D
+     * @param x координата x
+     * @param y координата y
+     * @param z координата z
+     */
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    /**
      * Расчет расстояния между точками.
-     * @param x1 Коорджината X первой точки.
-     * @param x2 Коорджината X второй точки.
-     * @param y1 Коорджината Y первой точки.
-     * @param y2 Коорджината Y второй точки.
+     * @param that экземпляр класса Point для вычисления расстояния.
      * @return расстояние.
      */
-    public double distance(int x1, int y1, int x2, int y2) {
-        double result = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    public double distance(Point that) {
+        double result = Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
         return result;
+    }
+    /**
+     * Расчет расстояния между точками в 3D
+     * @param that экземпляр класса Point для вычисления расстояния.
+     * @return расстояние.
+     */
+    public double distance3d(Point that) {
+        double result = Math.sqrt(Math.pow(this.x - that.x,2)+Math.pow(this.y - that.y,2)+Math.pow(this.z - that.z,2));
+        return result;
+    }
+    public void info() {
+        System.out.println(String.format("Point[%s, %s]", this.x, this.y));
     }
 }

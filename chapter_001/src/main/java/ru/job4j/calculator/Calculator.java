@@ -18,6 +18,17 @@ public class Calculator {
         return first + second;
     }
     /**
+     * Method add.
+     * Складываем первое и второе число.
+     * @param first First numeral.
+     * @param second Second numeral.
+     * @param third Third numeral.
+     * @return First numeral plus Second numeral plus thirde numeral.
+     */
+    public double add(double first, double second,double third) {
+        return add(first, add(second, third));
+    }
+    /**
      * Method subtract.
      * Вычитаем из первого числа второе
      * @param first First numeral.

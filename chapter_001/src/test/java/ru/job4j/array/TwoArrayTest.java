@@ -10,8 +10,8 @@ public class TwoArrayTest {
     @Test
     public void whenArray12And34Then1234() {
         TwoArray twoArray = new TwoArray();
-        int[] input1 = {1, 2};
-        int[] input2 = {3, 4};
+        int[] input1 = {1, 3};
+        int[] input2 = {2, 4};
        int[] result =  twoArray.merge(input1, input2);
        int[] expect = {1, 2, 3, 4};
        assertThat(result, is(expect));
@@ -22,7 +22,7 @@ public class TwoArrayTest {
         int[] input1 = {4, 5, 6, 7};
         int[] input2 = {1, 2};
         int[] result =  twoArray.merge(input1, input2);
-        int[] expect = {4, 5, 6, 7, 1, 2};
+        int[] expect = {1, 2, 4, 5, 6, 7};
         assertThat(result, is(expect));
     }
 }
