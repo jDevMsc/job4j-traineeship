@@ -52,7 +52,6 @@ public class TrackerTest {
     tracker.add(item2);
     tracker.add(item3);
     tracker.delete(item2.getId());
-    assertNull(tracker.findAll()[2]);
     assertThat(tracker.findAll()[1], is(item3));
 
   }
