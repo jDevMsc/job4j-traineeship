@@ -13,9 +13,7 @@ public class Programmer extends Engineer {
     return certificates;
   }
 
-  public void fixBug(Bug bug){
+  public void fixBug(Bug bug) {
 
   }
-
-
 }

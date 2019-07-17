@@ -7,7 +7,8 @@ public class Surgeon extends Doctor {
   public String getFavoriteTool() {
     return favoriteTool;
   }
-  public void doOperation(Pacient pacient){
+
+  public void doOperation(Pacient pacient) {
 
   }
 }

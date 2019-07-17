@@ -17,8 +17,7 @@ public class Tracker {
   private static final Random RN = new Random();
 
 
-
-  public int  lengthItems(){
+  public int lengthItems() {
     return pozition;
   }
 

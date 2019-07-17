@@ -21,9 +21,9 @@ public class TrackerTest {
   @Test
   public void whenReplaceItemThenTrackerHasSameItem() {
     Tracker tracker = new Tracker();
-    Item item = new Item("test1", "testDescription", 1232l);
+    Item item = new Item("test1", "testDescription", 1232L);
     tracker.add(item);
-    Item item2 = new Item("test2", "testDescription", 123l);
+    Item item2 = new Item("test2", "testDescription", 123L);
     boolean result = tracker.replace(item.getId(), item2);
     System.out.println(result);
     assertThat(tracker.findById(item.getId()).getName(), is("test2"));
@@ -32,9 +32,9 @@ public class TrackerTest {
   @Test
   public void whenFindByName() {
     Tracker tracker = new Tracker();
-    Item item = new Item("test1", "testDescription", 1232l);
-    Item item2 = new Item("test2", "testDescription", 123l);
-    Item item3 = new Item("test3", "testDescription", 1234l);
+    Item item = new Item("test1", "testDescription", 1232L);
+    Item item2 = new Item("test2", "testDescription", 123L);
+    Item item3 = new Item("test3", "testDescription", 1234L);
     tracker.add(item);
     tracker.add(item2);
     tracker.add(item3);
@@ -45,9 +45,9 @@ public class TrackerTest {
   @Test
   public void whenAddItemThenDeleteAndFindAll() {
     Tracker tracker = new Tracker();
-    Item item = new Item("test1", "testDescription", 11l);
-    Item item2 = new Item("test2", "testDescription2", 12l);
-    Item item3 = new Item("test3", "testDescription3", 13l);
+    Item item = new Item("test1", "testDescription", 11L);
+    Item item2 = new Item("test2", "testDescription2", 12L);
+    Item item3 = new Item("test3", "testDescription3", 13L);
     tracker.add(item);
     tracker.add(item2);
     tracker.add(item3);

@@ -13,10 +13,11 @@ public class Engineer extends Profession {
     return level;
   }
 
-  public void doTask(Task task){
+  public void doTask(Task task) {
 
   }
-  public void meetCustomer(Customer customer){
+
+  public void meetCustomer(Customer customer) {
 
   }
 }

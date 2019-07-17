@@ -8,7 +8,7 @@ public class Dentist extends Doctor {
     return favoriteTooth;
   }
 
-  public void deleteTeeth(Pacient pacient){
+  public void deleteTeeth(Pacient pacient) {
 
   }
 }
