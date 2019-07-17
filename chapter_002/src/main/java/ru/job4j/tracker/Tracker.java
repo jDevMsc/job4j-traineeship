@@ -16,6 +16,12 @@ public class Tracker {
   private int pozition;
   private static final Random RN = new Random();
 
+
+
+  public int  lengthItems(){
+    return pozition;
+  }
+
   /**
    * Метод добавляет заявку, переданную в аргументах в массив заявок this.items
    *
@@ -59,10 +65,10 @@ public class Tracker {
 
   public boolean delete(String id) {
     boolean result = false;
-    for (int i = 0; i < pozition;i++ ) {
+    for (int i = 0; i < pozition; i++) {
       if (this.items[i] != null && this.items[i].getId().equals(id)) {
-        System.arraycopy(this.items,i+1,this.items,i,this.pozition-i);
-        this.items[this.items.length-1] = null;
+        System.arraycopy(this.items, i + 1, this.items, i, this.pozition - i);
+        this.items[this.items.length - 1] = null;
         result = true;
         this.pozition--;
         break;
@@ -131,4 +137,6 @@ public class Tracker {
   private String generateId() {
     return String.valueOf(System.currentTimeMillis() + RN.nextInt());
   }
+
+
 }
