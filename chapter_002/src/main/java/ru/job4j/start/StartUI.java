@@ -75,9 +75,13 @@ public class StartUI {
     } else {
       System.out.println("------------ Начинаем удаление ITEM --------------");
       String id = input.ask("Введите ID для поиска ITEM");
-      tracker.delete(id);
-      System.out.printf("------------ ITEM по ID: %s  удалено--------------", id);
+      if(tracker.delete(id)){
+        System.out.printf("------------ ITEM по ID: %s  удалено--------------", id);
+        System.out.println(" ");
+      }
+      System.out.printf("------------ ID не найден, элемент не удален--------------", id);
       System.out.println(" ");
+
     }
   }
 
