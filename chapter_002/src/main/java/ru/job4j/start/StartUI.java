@@ -78,9 +78,11 @@ public class StartUI {
       if(tracker.delete(id)){
         System.out.printf("------------ ITEM по ID: %s  удалено--------------", id);
         System.out.println(" ");
+
+      } else {
+        System.out.printf("------------ ID не найден, элемент не удален--------------", id);
+        System.out.println(" ");
       }
-      System.out.printf("------------ ID не найден, элемент не удален--------------", id);
-      System.out.println(" ");
 
     }
   }
