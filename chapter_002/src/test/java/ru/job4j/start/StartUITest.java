@@ -7,25 +7,27 @@ import static org.junit.Assert.assertThat;
 public class StartUITest {
 
   @Test
-  public void whenAddNewItem(){
+  public void whenAddNewItem() {
     Tracker tracker = new Tracker();
-    Input input = new StubInput(new String[]{"0", "test name", "desc", "6"});
+    StubInput stubInput = new StubInput(new String[]{"0", "test name", "desc", "6"});
+    Input input = stubInput;
     new StartUI(input, tracker).init();
-    assertThat(tracker.findAll()[0].getName(), is("test name"));
+    assertThat(tracker.findAll()[0].getName(), is(stubInput.getAnswers()[1]));
   }
 
   @Test
-  public void whenShowAllItem(){
+  public void whenShowAllItem() {
       }
 
   @Test
-  public void whenEditItem(){
+  public void whenEditItem() {
     Tracker tracker = new Tracker();
     Item item = tracker.add(new Item("test name", "desc"));
-    Input input = new StubInput(new String[]{"2", item.getId(), "test replace", "заменили заявку", "6"});
+    StubInput stubInput = new StubInput(new String[]{"2", item.getId(), "test replace", "заменили заявку", "6"});
+    Input input = stubInput;
     new StartUI(input, tracker).init();
     // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
-    assertThat(tracker.findById(item.getId()).getName(), is("test replace"));
+    assertThat(tracker.findById(item.getId()).getName(), is(stubInput.getAnswers()[2]));
   }
 
   @Test
@@ -35,11 +37,13 @@ public class StartUITest {
     Item item2 = tracker.add(new Item("test2 name", "desc2"));
     Input input = new StubInput(new String[]{"3", item.getId(), "6"});
     new StartUI(input, tracker).init();
-    assertThat(tracker.findAll()[0].getName(),is("test2 name"));
+    assertThat(tracker.findAll()[0].getName(),is(item2.getName()));
   }
+
   @Test
   public void wheFindById(){
   }
+
   @Test
   public void wheFindByName(){
   }

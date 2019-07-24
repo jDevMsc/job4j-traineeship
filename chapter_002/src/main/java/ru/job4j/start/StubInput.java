@@ -11,6 +11,11 @@ public class StubInput implements Input {
    * и  выйти из трекера.
    */
   private String[] answers;
+
+  public String[] getAnswers() {
+    return answers;
+  }
+
   /**
    * Поле считает количество вызовом метода ask.
    * При каждом вызове надо передвинуть указатель на новое число.
