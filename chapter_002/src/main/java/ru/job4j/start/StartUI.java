@@ -36,8 +36,8 @@ public class StartUI {
 
   public void showAllItem() {
     if (tracker.lengthItems() < 1) {
-      System.out.println("------------ Список ITEM пуст --------------");
-      System.out.println(" ");
+      System.out.print("------------ Список ITEM пуст --------------\n");
+      System.out.print("\n");
     } else {
       System.out.println("------------ Выводим весь список ITEM --------------");
       Item[] showAll = this.tracker.findAll();
@@ -90,8 +90,8 @@ public class StartUI {
   public void findById() {
 
     if (tracker.lengthItems() < 1) {
-      System.out.println("------------ Список ITEM пуст --------------");
-      System.out.println(" ");
+      System.out.print("------------ Список ITEM пуст --------------\n");
+      System.out.print("\n");
     } else {
       System.out.println("------------ Начинаем поиск  ITEM по id--------------");
       String id = input.ask("Введите ID для поиска ITEM");
@@ -109,8 +109,8 @@ public class StartUI {
 
   public void findByName() {
     if (tracker.lengthItems() < 1) {
-      System.out.println("------------ Список ITEM пуст --------------");
-      System.out.println(" ");
+      System.out.print("------------ Список ITEM пуст --------------\n");
+      System.out.print("\n");
     } else {
       System.out.println("------------ Начинаем поиск  ITEM по имени--------------");
       String name = input.ask("Введите имя для поиска ITEM");
@@ -132,13 +132,13 @@ public class StartUI {
   }
 
   private void showMenu() {
-    System.out.println("0. Add new Item");
-    System.out.println("1. Show all items");
-    System.out.println("2. Edit item");
-    System.out.println("3. Delete item");
-    System.out.println("4. Find item by Id");
-    System.out.println("5. Find items by name");
-    System.out.println("6. Exit Program");
+    System.out.print("0. Add new Item\n");
+    System.out.print("1. Show all items\n");
+    System.out.print("2. Edit item\n");
+    System.out.print("3. Delete item\n");
+    System.out.print("4. Find item by Id\n");
+    System.out.print("5. Find items by name\n");
+    System.out.print("6. Exit Program\n");
   }
 
   public void init() {
