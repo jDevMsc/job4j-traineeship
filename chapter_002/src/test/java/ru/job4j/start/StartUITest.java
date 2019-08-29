@@ -13,6 +13,14 @@ public class StartUITest {
 
   private final PrintStream stdout = System.out;
   private final ByteArrayOutputStream out = new ByteArrayOutputStream();
+  final StringBuilder menu = new StringBuilder().append("0. Add new Item\n")
+                                                .append("1. Show all items\n")
+                                                .append("2. Edit item\n")
+                                                .append("3. Delete item\n")
+                                                .append("4. Find item by Id\n")
+                                                .append("5. Find items by name\n")
+                                                .append("6. Exit Program\n");
+
 
   @Before
   public void loadOutput() {
@@ -44,22 +52,10 @@ public class StartUITest {
     assertThat(
         new String(out.toByteArray()),is(
             new StringBuilder()
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Список ITEM пуст --------------\n")
                 .append("\n")
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Прогармма завершает свою работу --------------")
                 .append(System.lineSeparator())
                 .toString()
@@ -98,22 +94,10 @@ public class StartUITest {
     assertThat(
         new String(out.toByteArray()),is(
             new StringBuilder()
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Список ITEM пуст --------------\n")
                 .append("\n")
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Прогармма завершает свою работу --------------")
                 .append(System.lineSeparator())
                 .toString()
@@ -130,22 +114,10 @@ public class StartUITest {
     assertThat(
         new String(out.toByteArray()),is(
             new StringBuilder()
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Список ITEM пуст --------------\n")
                 .append("\n")
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
-                .append("6. Exit Program\n")
+                .append(menu)
                 .append("------------ Прогармма завершает свою работу --------------")
                 .append(System.lineSeparator())
                 .toString()
